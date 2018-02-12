@@ -1,0 +1,171 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details test
+#
+defaults: &defaults
+  working_directory: /tmp/sr
+  docker:
+    - image: circleci/node:8
+  
+version: 2
+jobs:
+  install_dependencies:
+    <<: *defaults
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: 
+          name: Install Deps
+          command: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace: 
+          root: /tmp
+          paths:
+            - sr
+  get_dev_env_config:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Pull config file and write to disk
+          command: SR_CONFIG_CONTEXT='dev' yarn run get-config
+      - persist_to_workspace: 
+          root: /tmp
+          paths:
+            - sr
+  get_prod_env_config:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Pull config file and write to disk
+          command: SR_CONFIG_CONTEXT='prod' yarn run get-config
+      - persist_to_workspace: 
+          root: /tmp
+          paths:
+            - sr
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Build Project
+          command: yarn run build
+      - persist_to_workspace: 
+          root: /tmp
+          paths:
+            - sr
+  build_for_production:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run: 
+          name: Build project for deploy
+          command: DEPLOY_ENV=prod yarn run build
+      - persist_to_workspace: 
+          root: /tmp
+          paths:
+            - sr
+  deploy_to_prod:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Test VPS deploy
+          command: scp -oStrictHostKeyChecking=no -r build/* sweet@sr.shaunsweet.com:/var/www/sr.shaunsweet.com/
+  deploy_to_dev:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - run:
+          name: Test VPS deploy
+          command: scp -oStrictHostKeyChecking=no -r build/* sweet@sr.shaunsweet.com:/var/www/sr.shaunsweet.com/
+
+workflows:
+  version: 2
+  build-n-deploy-prod:
+    jobs:
+      - install_dependencies:
+          filters:
+            branches:
+              only:
+                - master
+      - get_prod_env_config:
+          requires: 
+            - install_dependencies
+      - build_for_production:
+          requires:
+            - install_dependencies
+            - get_prod_env_config
+          filters:
+            branches:
+              only:
+                - master
+      - deploy_to_prod:
+          requires: 
+            - install_dependencies
+            - get_prod_env_config
+            - build_for_production
+          filters:
+            branches:
+              only:
+                - master
+  build-n-deploy-dev:
+    jobs:
+      - install_dependencies:
+          filters:
+            branches:
+              only:
+                - dev
+      - get_dev_env_config:
+          requires: 
+            - install_dependencies
+          filters:
+            branches:
+              only:
+                - dev
+      - build:
+          requires: 
+            - get_dev_env_config
+            - install_dependencies
+          filters:
+            branches:
+              only:
+                - dev
+      - deploy_to_dev:
+          requires:
+            - get_dev_env_config
+            - install_dependencies
+            - build
+          filters:
+            branches:
+              only:
+                - dev
+  test-build:
+    jobs:
+      - install_dependencies:
+          filters:
+            branches:
+              only:
+                - /renovate.*/
+      - build:
+          requires:
+            - install_dependencies
+          filters:
+            branches:
+              only:
+                - /renovate.*/
