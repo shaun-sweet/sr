@@ -16,7 +16,8 @@
   "scripts": {
     "start": "node ./tools/server.js",
     "build": "node ./tools/build.js",
-    "test": "node ./tools/run_test.js"
+    "test": "node ./tools/run_test.js",
+    "get-config": "node get-config.js"
   },
   "devDependencies": {
     "argparse": "^1.0.7",
