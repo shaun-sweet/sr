@@ -84,7 +84,7 @@ jobs:
       - attach_workspace:
           at: /tmp
       - run:
-          name: Test VPS deploy
+          name: MASTER deploy
           command: scp -oStrictHostKeyChecking=no -r build/* sweet@sr.shaunsweet.com:/var/www/sr.shaunsweet.com/
   deploy_to_dev:
     <<: *defaults
@@ -92,7 +92,7 @@ jobs:
       - attach_workspace:
           at: /tmp
       - run:
-          name: Test VPS deploy
+          name: DEV deploy
           command: scp -oStrictHostKeyChecking=no -r build/* sweet@sr.shaunsweet.com:/var/www/sr.shaunsweet.com/
 
 workflows:
