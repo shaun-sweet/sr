@@ -15,6 +15,6 @@ export default function reducer (state = initialState(), action = {}) {
 
 function initialState () {
   return {
-    user: {}
+
   }
 }
