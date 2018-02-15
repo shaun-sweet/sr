@@ -144,7 +144,7 @@ ansi-styles@^3.0.0, ansi-styles@^3.2.0:
   dependencies:
     color-convert "^1.9.0"
 
-antd@^3.2.1:
+antd@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/antd/-/antd-3.2.1.tgz#141d87b61063b58aa1cd392d0bf5fb953e96eeec"
   dependencies:
@@ -604,7 +604,7 @@ babel-plugin-dynamic-import-node@1.1.0:
     babel-template "^6.26.0"
     babel-types "^6.26.0"
 
-babel-plugin-import@^1.6.4:
+babel-plugin-import@1.6.4:
   version "1.6.4"
   resolved "https://registry.yarnpkg.com/babel-plugin-import/-/babel-plugin-import-1.6.4.tgz#b742b7a8f4e2a5685e2b7cddb1dec705223784bb"
   dependencies:
@@ -2143,7 +2143,6 @@ dotenv@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
 
-
 dotenv@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-5.0.0.tgz#0206eb5b336639bf377618a2a304ff00c6a1fddb"
@@ -2155,7 +2154,6 @@ draft-js@^0.10.0, draft-js@~0.10.0:
     fbjs "^0.8.15"
     immutable "~3.7.4"
     object-assign "^4.1.0"
-
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -2354,13 +2352,13 @@ eslint-config-standard-jsx@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/eslint-config-standard-jsx/-/eslint-config-standard-jsx-4.0.2.tgz#009e53c4ddb1e9ee70b4650ffe63a7f39f8836e1"
 
-eslint-config-standard-react@^5.0.0:
+eslint-config-standard-react@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard-react/-/eslint-config-standard-react-5.0.0.tgz#64c7b8140172852be810a53d48ee87649ff178e3"
   dependencies:
     eslint-config-standard-jsx "^4.0.0"
 
-eslint-config-standard@^11.0.0-beta.0:
+eslint-config-standard@11.0.0-beta.0:
   version "11.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-11.0.0-beta.0.tgz#f8afe69803d95c685a4b8392b8793188eb03cbb3"
 
@@ -5909,7 +5907,7 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-hot-loader@^3.1.3:
+react-hot-loader@3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-3.1.3.tgz#6f92877326958c7cb0134b512474517869126082"
   dependencies:
@@ -6137,7 +6135,7 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-logger@^3.0.6:
+redux-logger@3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
   dependencies:
