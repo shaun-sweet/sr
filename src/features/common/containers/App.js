@@ -1,27 +1,30 @@
 import React, { Component } from 'react'
 import {
-  BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { DBoxLandingPage, SuccessCallback } from '@features/Dropbox/pages'
-import { store, history } from '../redux'
+import storeConfig from '@common/configStore'
+import { Btn } from '@components/Buttons'
+import { ConnectedRouter } from 'react-router-redux'
+import history from '@common/history'
 
+const store = storeConfig()
 class App extends Component {
   render () {
     return (
       <Provider store={store}>
         <div className='App'>
           <header className='App-header'>
-            <h1 className='App-title'>SALAD RABBIT YAY</h1>
+            <h1 className='App-title'>its working YAY! fds</h1>
           </header>
-          <Router history={history}>
+          <ConnectedRouter history={history}>
             <div className='content'>
               <nav>
                 <ul>
-                  <li><Link to='/'>Home</Link></li>
-                  <li><Link to='/login-success'>IDK</Link></li>
+                  <li><a onClick={() => console.log('hi')}>Home</a></li>
+                  <li><Link to='/login-success'><Btn>IDK</Btn></Link></li>
                 </ul>
               </nav>
               <main>
@@ -29,7 +32,7 @@ class App extends Component {
                 <Route path='/login-success' component={SuccessCallback} />
               </main>
             </div>
-          </Router>
+          </ConnectedRouter>
         </div>
       </Provider>
     )
