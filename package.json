@@ -113,5 +113,10 @@
       "standard",
       "standard-react"
     ]
+  },
+  "renovate": {
+    "lockFileMaintenance": {
+      "enabled": false
+    }
   }
 }
