@@ -1,39 +1,21 @@
 import React, { Component } from 'react'
-import {
-  Route,
-  Link
-} from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { DBoxLandingPage, SuccessCallback } from '@features/Dropbox/pages'
 import storeConfig from '@common/configStore'
-import { Btn } from '@components/Buttons'
 import { ConnectedRouter } from 'react-router-redux'
 import history from '@common/history'
+import Layout from './Layout'
+import { PersistGate } from 'redux-persist/integration/react'
 
-const store = storeConfig()
+const { store, persistor } = storeConfig()
 class App extends Component {
   render () {
     return (
       <Provider store={store}>
-        <div className='App'>
-          <header className='App-header'>
-            <h1 className='App-title'>its working YAY! fds</h1>
-          </header>
+        <PersistGate loading={null} persistor={persistor}>
           <ConnectedRouter history={history}>
-            <div className='content'>
-              <nav>
-                <ul>
-                  <li><a onClick={() => console.log('hi')}>Home</a></li>
-                  <li><Link to='/login-success'><Btn>IDK</Btn></Link></li>
-                </ul>
-              </nav>
-              <main>
-                <Route exact path='/' component={DBoxLandingPage} />
-                <Route path='/login-success' component={SuccessCallback} />
-              </main>
-            </div>
+            <Layout />
           </ConnectedRouter>
-        </div>
+        </PersistGate>
       </Provider>
     )
   }

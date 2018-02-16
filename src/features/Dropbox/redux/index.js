@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import accountReducer from './account'
+import accountReducer from './saveDbxAccount'
 
 const reducers = {
   account: accountReducer

@@ -2,6 +2,8 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import ReduxThunk from 'redux-thunk'
 import history from './history'
 import rootReducer from './rootReducer'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 // eslint-disable-next-line
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 // Now you can dispatch navigation actions from anywhere!
@@ -20,11 +22,24 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
+const persistConfig = {
+  key: 'dropbox',
+  whitelist: ['dropbox'],
+  storage
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
 export default function configureStore (initialState) {
-  const store = createStore(rootReducer, initialState, compose(
-    applyMiddleware(...middlewares),
-    ...enhancers
-  ))
+  const store = createStore(
+    persistedReducer,
+    initialState,
+    compose(
+      applyMiddleware(...middlewares),
+      ...enhancers
+    )
+  )
+  const persistor = persistStore(store)
 
   /* istanbul ignore if  */
   if (module.hot) {
@@ -34,5 +49,5 @@ export default function configureStore (initialState) {
       store.replaceReducer(nextRootReducer)
     })
   }
-  return store
+  return { store, persistor }
 }

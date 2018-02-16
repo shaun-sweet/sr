@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import App from '@features/common/containers/App'
 import { AppContainer } from 'react-hot-loader'
 import registerServiceWorker from './registerServiceWorker'
+import 'antd/dist/antd.css'
 
 function renderApp (Component) {
   ReactDOM.render(
