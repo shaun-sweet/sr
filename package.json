@@ -62,9 +62,14 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "get-config": "node ./get_config.js"
+    "get-config": "node ./get_config.js",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/react": "^3.3.13",
     "eslint-config-standard": "11.0.0-beta.0",
     "eslint-config-standard-react": "5.0.0",
     "eslint-plugin-import": "2.8.0",
