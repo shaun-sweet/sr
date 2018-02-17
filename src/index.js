@@ -10,7 +10,7 @@ function renderApp (Component) {
     <AppContainer>
       <Component />
     </AppContainer>,
-    document.getElementById('root')
+    document.getElementById('react-root')
   )
 }
 renderApp(App)
