@@ -22,6 +22,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/react": "^3.3.13",
     "argparse": "^1.0.7",
     "axios": "^0.17.0",
     "babel-core": "^6.25.0",
@@ -88,16 +91,14 @@
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",
-    "webpack-node-externals": "^1.6.0",
-    "@storybook/react": "^3.3.13",
-    "@storybook/addon-actions": "^3.3.13",
-    "@storybook/addon-links": "^3.3.13"
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "antd": "^3.2.1",
     "dotenv": "^5.0.0",
     "dropbox": "^3.0.4",
     "redux-persist": "^5.9.0",
-    "styled-components": "^3.1.6"
+    "styled-components": "^3.1.6",
+    "uuid": "^3.2.1"
   }
 }
