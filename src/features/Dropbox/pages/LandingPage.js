@@ -7,7 +7,7 @@ class DBoxLandingPage extends Component {
     super()
     const { CALLBACK_DOMAIN, DROPBOX_CLIENT_ID } = process.env
     this.dbx = new Dropbox({ clientId: DROPBOX_CLIENT_ID })
-    this.authUrl = this.dbx.getAuthenticationUrl(`${CALLBACK_DOMAIN}/login-success`)
+    this.authUrl = this.dbx.getAuthenticationUrl(`${CALLBACK_DOMAIN}/auth`)
   }
 
   render () {

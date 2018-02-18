@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const nodeExternals = require('webpack-node-externals');
+const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals')
 
 // Since webpack.test.config.js is used by command line, save it as a separate file.
 
@@ -10,7 +10,7 @@ module.exports = {
     new webpack.DefinePlugin({
       ENV: '"test"',
       'process.env': {
-        NODE_ENV: JSON.stringify('test'),
+        NODE_ENV: JSON.stringify('test')
       }
     })
   ],
@@ -42,5 +42,5 @@ module.exports = {
         loader: 'url-loader?limit=8192'
       }
     ]
-  },
-};
+  }
+}

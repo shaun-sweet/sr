@@ -17,7 +17,9 @@
     "start": "node ./tools/server.js",
     "build": "node ./tools/build.js",
     "test": "node ./tools/run_test.js",
-    "get-config": "node ./tools/get_config.js"
+    "get-config": "node ./tools/get_config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "argparse": "^1.0.7",
@@ -86,7 +88,10 @@
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "@storybook/react": "^3.3.13",
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13"
   },
   "dependencies": {
     "antd": "^3.2.1",

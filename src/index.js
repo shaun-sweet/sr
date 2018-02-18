@@ -1,12 +1,13 @@
+import 'babel-polyfill'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import App from '@features/common/containers/App'
 import { AppContainer } from 'react-hot-loader'
 import registerServiceWorker from './registerServiceWorker'
 import 'antd/dist/antd.css'
 
 function renderApp (Component) {
-  ReactDOM.render(
+  render(
     <AppContainer>
       <Component />
     </AppContainer>,
@@ -16,7 +17,7 @@ function renderApp (Component) {
 renderApp(App)
 
 if (module.hot) {
-  module.hot.accept('@features/common/containers/App', () => {
+  module.hot.accept(() => {
     renderApp(App)
   })
 }
