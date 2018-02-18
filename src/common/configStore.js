@@ -8,19 +8,12 @@ import storage from 'redux-persist/lib/storage'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 // Now you can dispatch navigation actions from anywhere!
 
-const enhancers = []
 const middlewares = [
   ReduxThunk,
   routerMiddleware(history)
 ]
 
-if (process.env.NODE_ENV === 'development') {
-  const devToolsExtension = window.devToolsExtension
-
-  if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension())
-  }
-}
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const persistConfig = {
   key: 'dropbox',
@@ -34,9 +27,8 @@ export default function configureStore (initialState) {
   const store = createStore(
     persistedReducer,
     initialState,
-    compose(
-      applyMiddleware(...middlewares),
-      ...enhancers
+    composeEnhancers(
+      applyMiddleware(...middlewares)
     )
   )
   const persistor = persistStore(store)

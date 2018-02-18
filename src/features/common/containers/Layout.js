@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import { Btn } from '@components/Buttons'
 import AppWrapper from '@components/AppWrapper'
+// const DBoxLandingPage = () => require('@features/Dropbox/pages/LandingPage.js')
 
 const AppLayout = () => {
   return (

@@ -78,7 +78,8 @@ module.exports = (type) => { // eslint-disable-line
       path: path.join(__dirname, 'build/static'),
 
       // Exposed asset path. NOTE: the end '/' is necessary
-      publicPath: '/static/'
+      publicPath: '/static/',
+      chunkFilename: 'js/[id].[chunkhash].js'
     },
 
     plugins: _.compact([
