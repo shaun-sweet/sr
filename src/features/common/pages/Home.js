@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SideNav from '@features/common/containers/SideNav'
+import SideBar from '@features/common/containers/SideBar'
 import MainView from '@components/MainView'
 
 const Root = styled.div`
@@ -12,7 +12,7 @@ const Root = styled.div`
 const Home = () => {
   return (
     <Root className='home'>
-      <SideNav />
+      <SideBar />
       <MainView />
     </Root>
   )

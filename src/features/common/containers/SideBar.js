@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Root = styled.div`
   flex: 2;
 `
-const SideNav = () => {
+const SideBar = () => {
   return (
     <Root>
       This is the nav
@@ -12,4 +12,4 @@ const SideNav = () => {
   )
 }
 
-export default SideNav
+export default SideBar
