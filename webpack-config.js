@@ -1,7 +1,7 @@
 'use strict'
 //  Summary:
 //    Get webpack config for different targets
-
+require('dotenv').config()
 const path = require('path')
 const _ = require('lodash')
 const webpack = require('webpack')
@@ -62,7 +62,6 @@ module.exports = (type) => { // eslint-disable-line
       dist: {
         main: [
           'babel-polyfill',
-          './styles/index.less',
           './index'
         ]
       },
