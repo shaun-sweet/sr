@@ -1,44 +1,45 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import { routerMiddleware } from 'react-router-redux';
-import history from './history';
-import rootReducer from './rootReducer';
+import { createStore, applyMiddleware, compose } from 'redux'
+import ReduxThunk from 'redux-thunk'
+import history from './history'
+import rootReducer from './rootReducer'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+// eslint-disable-next-line
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+// Now you can dispatch navigation actions from anywhere!
 
-const router = routerMiddleware(history);
-
-// NOTE: Do not change middleares delaration pattern since rekit plugins may register middlewares to it.
 const middlewares = [
-  thunk,
-  router,
-];
+  ReduxThunk,
+  routerMiddleware(history)
+]
 
-let devToolsExtension = f => f;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-/* istanbul ignore if  */
-if (process.env.NODE_ENV === 'dev') {
-  const { createLogger } = require('redux-logger');
-
-  const logger = createLogger({ collapsed: true });
-  middlewares.push(logger);
-
-  if (window.devToolsExtension) {
-    devToolsExtension = window.devToolsExtension();
-  }
+const persistConfig = {
+  key: 'dropbox',
+  whitelist: ['dropbox'],
+  storage
 }
 
-export default function configureStore(initialState) {
-  const store = createStore(rootReducer, initialState, compose(
-    applyMiddleware(...middlewares),
-    devToolsExtension
-  ));
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export default function configureStore (initialState) {
+  const store = createStore(
+    persistedReducer,
+    initialState,
+    composeEnhancers(
+      applyMiddleware(...middlewares)
+    )
+  )
+  const persistor = persistStore(store)
 
   /* istanbul ignore if  */
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('./rootReducer', () => {
-      const nextRootReducer = require('./rootReducer').default; // eslint-disable-line
-      store.replaceReducer(nextRootReducer);
-    });
+      const nextRootReducer = require('./rootReducer'); // eslint-disable-line
+      store.replaceReducer(nextRootReducer)
+    })
   }
-  return store;
+  return { store, persistor }
 }

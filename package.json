@@ -1,13 +1,13 @@
 {
-  "name": "test",
+  "name": "sb",
   "version": "0.0.1",
   "private": true,
-  "description": "test created by Rekit.",
+  "description": "sb created by Rekit.",
   "keywords": [
     "rekit"
   ],
   "rekit": {
-    "devPort": 6075,
+    "devPort": 3000,
     "studioPort": 6076,
     "buildPort": 6077,
     "plugins": [],
@@ -17,7 +17,9 @@
     "start": "node ./tools/server.js",
     "build": "node ./tools/build.js",
     "test": "node ./tools/run_test.js",
-    "get-config": "node ./tools/get-config.js"
+    "get-config": "node ./tools/get_config.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "argparse": "^1.0.7",
@@ -35,18 +37,24 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.1.2",
     "css-loader": "^0.28.8",
+    "dotenv-webpack": "^1.5.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^4.15.0",
+    "eslint": "^4.18.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
     "express": "^4.16.2",
     "express-history-api-fallback": "^2.2.1",
     "file-loader": "^1.1.6",
+    "fs": "^0.0.1-security",
     "history": "^4.7.2",
     "jsdom": "^11.5.1",
     "less": "^2.7.3",
@@ -72,7 +80,7 @@
     "rekit-core": "^2.1.1",
     "rekit-studio": "^2.2.0",
     "request": "^2.83.0",
-    "shelljs": "^0.8.0",
+    "shelljs": "^0.8.1",
     "sinon": "^4.1.5",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
@@ -80,6 +88,16 @@
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "@storybook/react": "^3.3.13",
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13"
+  },
+  "dependencies": {
+    "antd": "^3.2.1",
+    "dotenv": "^5.0.0",
+    "dropbox": "^3.0.4",
+    "redux-persist": "^5.9.0",
+    "styled-components": "^3.1.6"
   }
 }

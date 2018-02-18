@@ -1,27 +1,36 @@
-'use strict';
+'use strict'
 //  Summary:
 //    Get webpack config for different targets
 
-const path = require('path');
-const _ = require('lodash');
-const webpack = require('webpack');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const path = require('path')
+const _ = require('lodash')
+const webpack = require('webpack')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
+const alias = require('./alias')
 
-const pkgJson = require('./package.json');
+const { CALLBACK_DOMAIN, DROPBOX_CLIENT_ID } = process.env
+console.log(CALLBACK_DOMAIN, DROPBOX_CLIENT_ID)
 
+const pkgJson = require('./package.json')
 module.exports = (type) => { // eslint-disable-line
   // type is one of [dev, dll, test, dist]
   // NOTE: for test, only module property is used.
 
-  const isDev = type === 'dev';
-  const isDist = type === 'dist';
+  const isDev = type === 'dev'
+  const isDist = type === 'dist'
 
   return {
+    node: {
+      fs: 'empty'
+    },
+    resolve: {
+      alias
+    },
     devtool: {
       dev: 'eval',
       dll: false,
       test: false,
-      dist: false,
+      dist: false
     }[type],
     cache: true,
     context: path.join(__dirname, 'src'),
@@ -30,9 +39,8 @@ module.exports = (type) => { // eslint-disable-line
         main: [
           'react-hot-loader/patch',
           `webpack-hot-middleware/client?http://0.0.0.0:${pkgJson.rekit.devPort}`,
-          './styles/index.less',
-          './index',
-        ],
+          './index'
+        ]
       },
       dll: {
         // Here dll is only used for dev.
@@ -48,17 +56,17 @@ module.exports = (type) => { // eslint-disable-line
           'react-router-redux',
           'redux',
           'redux-logger',
-          'redux-thunk',
-        ],
+          'redux-thunk'
+        ]
       },
       dist: {
         main: [
           'babel-polyfill',
           './styles/index.less',
           './index'
-        ],
+        ]
       },
-      test: null,
+      test: null
     }[type],
 
     output: {
@@ -69,7 +77,8 @@ module.exports = (type) => { // eslint-disable-line
       path: path.join(__dirname, 'build/static'),
 
       // Exposed asset path. NOTE: the end '/' is necessary
-      publicPath: '/static/'
+      publicPath: '/static/',
+      chunkFilename: 'js/[id].[chunkhash].js'
     },
 
     plugins: _.compact([
@@ -81,6 +90,8 @@ module.exports = (type) => { // eslint-disable-line
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(type === 'dist' ? 'production' : type),
+          CALLBACK_DOMAIN,
+          DROPBOX_CLIENT_ID
         }
       })
     ]),
@@ -110,5 +121,5 @@ module.exports = (type) => { // eslint-disable-line
         }
       ]
     }
-  };
-};
+  }
+}
