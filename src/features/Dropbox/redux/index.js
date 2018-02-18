@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import accountReducer from './saveDbxAccount'
+import accountReducer from './bootstrapApp'
 
 const reducers = {
   account: accountReducer

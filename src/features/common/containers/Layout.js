@@ -4,19 +4,20 @@ import {
   Route
 } from 'react-router-dom'
 import AppWrapper from '@components/AppWrapper'
+import Home from '@features/common/pages/Home'
 // const DBoxLandingPage = () => require('@features/Dropbox/pages/LandingPage.js')
 
 const AppLayout = () => {
   return (
     <AppWrapper className='root'>
-      <div className='sticky-footer'>
+      <div className='container'>
         <header>
           <nav />
         </header>
         <main>
-          <h1 className='title'>its working YAY!</h1>
           <Route exact path='/' component={DBoxLandingPage} />
           <Route path='/auth' component={SuccessCallback} />
+          <Route path='/sr' component={Home} />
         </main>
       </div>
       <footer>
