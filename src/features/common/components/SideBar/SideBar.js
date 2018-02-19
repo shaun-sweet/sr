@@ -1,6 +1,6 @@
 import React from 'react'
 // import propTypes from 'prop-types'
-import AccountSelectionWidget from '@features/Accounts/components/accountSelectionWidget'
+import AccountSelectionWidget from '@features/Accounts/containers/AccountSelectionWidget'
 import StyledComp from './styles'
 
 const SideBar = () => {

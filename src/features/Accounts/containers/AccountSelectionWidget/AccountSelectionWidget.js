@@ -5,18 +5,18 @@ import { connect } from 'react-redux'
 // import { bindActionCreators } from 'redux'
 import CompStyles from './styles'
 
-class __ComponentName__ extends React.Component {
+class AccountSelectionWidget extends React.Component {
   static propTypes = {
 
   }
 
   render = () => (
-    <CompStyles className='__ComponentName__'>
-      __ComponentName__
+    <CompStyles className='AccountSelectionWidget'>
+      AccountSelectionWidget
     </CompStyles>
   )
 }
-__ComponentName__.displayName = '__ComponentName__'
+AccountSelectionWidget.displayName = 'AccountSelectionWidget'
 
 const mapStateToProps = state => ({
 
@@ -29,4 +29,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(__ComponentName__)
+)(AccountSelectionWidget)
