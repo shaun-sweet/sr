@@ -1,5 +1,4 @@
 'use strict'
-require('dotenv').config()
 // Summary:
 //  This script is used to start dev server, build result server and Rekit Studio.
 //  Feel free to edit it to meet your specific requirement since this file has been copied to your project.

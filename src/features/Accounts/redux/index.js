@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import dropboxAccountReducer from './bootstrapApp'
+import accountReducer from './addAccount'
 
 const reducers = {
-  account: dropboxAccountReducer
+  accounts: accountReducer
 }
 
 export default combineReducers(reducers)

@@ -12,10 +12,10 @@ class DBoxLandingPage extends Component {
 
   render () {
     return (
-      <div className='dbx-login'>
-        DROP BOX
+      <div className='dbx-landing'>
+        <h1 className='title'>Salad Rabbit</h1>
         <a href={this.authUrl}>
-          <Button type='primary'>Login</Button>
+          <Button type='primary'>Login to Dropbox</Button>
         </a>
       </div>
     )

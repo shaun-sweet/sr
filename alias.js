@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  '@common': path.resolve(__dirname, 'src/common'),
+  '@config': path.resolve(__dirname, 'src/config'),
   '@': path.resolve(__dirname, 'src'),
   '@features': path.resolve(__dirname, 'src/features'),
   '@components': path.resolve(__dirname, 'src/features/common/components'),
