@@ -14,8 +14,8 @@
       "@features/*": [
         "./features/*"
       ],
-      "@common/*": [
-        "common/*"
+      "@config/*": [
+        "config/*"
       ]
     }
   }

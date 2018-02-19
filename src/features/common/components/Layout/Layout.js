@@ -3,13 +3,12 @@ import { DBoxLandingPage, SuccessCallback } from '@features/Dropbox/pages'
 import {
   Route
 } from 'react-router-dom'
-import AppWrapper from '@components/AppWrapper'
+import CompStyles from './styles'
 import Home from '@features/common/pages/Home'
-// const DBoxLandingPage = () => require('@features/Dropbox/pages/LandingPage.js')
 
 const AppLayout = () => {
   return (
-    <AppWrapper className='root'>
+    <CompStyles className='root'>
       <div className='container'>
         <header>
           <nav />
@@ -23,7 +22,7 @@ const AppLayout = () => {
       <footer>
         This is a footer
       </footer>
-    </AppWrapper>
+    </CompStyles>
   )
 }
 

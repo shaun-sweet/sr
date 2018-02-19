@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const AppWrapper = styled.div`
+const CompStyles = styled.div`
 
   display: flex;
   flex-flow: column;
@@ -37,4 +37,4 @@ const AppWrapper = styled.div`
 
 `
 
-export default AppWrapper
+export default CompStyles

@@ -1,7 +1,7 @@
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-import App from '@features/common/containers/App'
+import App from './App'
 import { AppContainer } from 'react-hot-loader'
 import registerServiceWorker from './registerServiceWorker'
 import 'antd/dist/antd.css'

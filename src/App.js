@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
-import storeConfig from '@common/configStore'
+import storeConfig from '@config/configStore'
 import { ConnectedRouter } from 'react-router-redux'
-import history from '@common/history'
-import Layout from './Layout'
+import history from '@config/history'
+import Layout from '@components/Layout'
 import { PersistGate } from 'redux-persist/integration/react'
 
 const { store, persistor } = storeConfig()
