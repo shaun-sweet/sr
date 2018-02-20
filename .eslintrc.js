@@ -1,7 +1,9 @@
 module.exports = {
     extends: [
         "standard",
-        "standard-react"
+        "standard-react",
+        "standard-flow"
     ],
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "plugins": [ "flowtype" ]
 }

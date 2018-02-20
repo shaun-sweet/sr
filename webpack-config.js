@@ -6,7 +6,7 @@ const path = require('path')
 const _ = require('lodash')
 const webpack = require('webpack')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
-const alias = require('./alias')
+const alias = require('./alias').resolve.alias
 
 const { CALLBACK_DOMAIN, DROPBOX_CLIENT_ID } = process.env
 console.log(CALLBACK_DOMAIN, DROPBOX_CLIENT_ID)
