@@ -1,3 +1,4 @@
+// @flow
 import { createStore, applyMiddleware, compose } from 'redux'
 import ReduxThunk from 'redux-thunk'
 import history from './history'
@@ -12,7 +13,6 @@ const middlewares = [
   ReduxThunk,
   routerMiddleware(history)
 ]
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const persistConfig = {
