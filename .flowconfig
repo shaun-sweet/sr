@@ -1,11 +1,18 @@
 [ignore]
-.*/src/config/.*
+.*/build/.*
+.*/tests/.*
+.*/tools/.*
+.*/.git/.*
+.*/node_modules/.*
 [include]
-
 [libs]
-
 [lints]
 
 [options]
-all=true
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+module.name_mapper='^@config\/\(.*\)$' -> '<PROJECT_ROOT>/src/config/\1'
+module.name_mapper='^@\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
+module.name_mapper='^@features\/\(.*\)$' -> '<PROJECT_ROOT>/src/features/\1'
+module.name_mapper='^@components\/\(.*\)$' -> '<PROJECT_ROOT>/src/features/common/components/\1'
+module.file_ext=.js
 [strict]

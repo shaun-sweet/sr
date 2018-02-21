@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import { DBoxLandingPage, SuccessCallback } from '@features/Dropbox/pages'
 import {
@@ -6,7 +7,8 @@ import {
 import CompStyles from './styles'
 import Home from '@features/common/pages/Home'
 
-const AppLayout = () => {
+/** Main page layout */
+const AppLayout = (): any => {
   return (
     <CompStyles className='root'>
       <div className='container'>

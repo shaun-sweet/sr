@@ -1,4 +1,3 @@
-// @flow
 import { createStore, applyMiddleware, compose } from 'redux'
 import ReduxThunk from 'redux-thunk'
 import history from './history'
@@ -8,7 +7,6 @@ import storage from 'redux-persist/lib/storage'
 // eslint-disable-next-line
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 // Now you can dispatch navigation actions from anywhere!
-
 const middlewares = [
   ReduxThunk,
   routerMiddleware(history)

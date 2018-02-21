@@ -9,6 +9,7 @@
     "react-hot-loader/babel",
     "syntax-dynamic-import",
     "lodash",
+    "react-flow-props-to-prop-types",
     [
       "module-resolver",
       {

@@ -5,6 +5,7 @@ require('dotenv').config()
 const path = require('path')
 const _ = require('lodash')
 const webpack = require('webpack')
+const FlowWebpackPlugin = require('flow-webpack-plugin')
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const alias = require('./alias').resolve.alias
 
@@ -83,6 +84,7 @@ module.exports = (type) => { // eslint-disable-line
     plugins: _.compact([
       isDev && new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
+      new FlowWebpackPlugin(),
       isDist && new LodashModuleReplacementPlugin(),
       isDist && new webpack.optimize.UglifyJsPlugin(),
       isDist && new webpack.optimize.AggressiveMergingPlugin(),

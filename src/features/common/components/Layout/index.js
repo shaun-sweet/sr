@@ -1,3 +1,2 @@
-import Layout from './Layout'
-
-export default Layout
+// @flow
+export { default } from './Layout'

@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+// @flow
+import React from 'react'
 import { Provider } from 'react-redux'
 import storeConfig from '@config/configStore'
 import { ConnectedRouter } from 'react-router-redux'
 import history from '@config/history'
 import Layout from '@components/Layout'
 import { PersistGate } from 'redux-persist/integration/react'
-
 const { store, persistor } = storeConfig()
-class App extends Component {
+
+class App extends React.Component<{}> {
   render () {
     return (
       <Provider store={store}>

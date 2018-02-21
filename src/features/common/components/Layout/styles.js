@@ -1,3 +1,4 @@
+// @flow
 import styled from 'styled-components'
 
 const CompStyles = styled.div`
