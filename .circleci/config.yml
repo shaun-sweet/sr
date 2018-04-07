@@ -5,7 +5,7 @@
 defaults: &defaults
   working_directory: /tmp/sr
   docker:
-    - image: circleci/node:8
+    - image: circleci/node:8@sha256:9eae91f5ccf92fde771ac92d45b56327709206d8ed026c82dc26ec8b2142c27d
   
 version: 2
 jobs:
