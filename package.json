@@ -76,7 +76,7 @@
     "nock": "9.1.6",
     "npm-run": "4.1.2",
     "nyc": "11.4.1",
-    "prop-types": "15.6.0",
+    "prop-types": "15.6.2",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-hot-loader": "3.1.3",
