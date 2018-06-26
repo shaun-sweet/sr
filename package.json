@@ -86,7 +86,7 @@
     "redux": "3.7.2",
     "redux-logger": "3.0.6",
     "redux-mock-store": "1.5.1",
-    "redux-thunk": "2.2.0",
+    "redux-thunk": "2.3.0",
     "rekit-core": "2.2.2",
     "rekit-studio": "2.2.1",
     "request": "2.83.0",
