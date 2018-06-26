@@ -98,7 +98,7 @@
     "webpack-bundle-analyzer": "2.10.0",
     "webpack-dev-middleware": "2.0.5",
     "webpack-hot-middleware": "2.21.0",
-    "webpack-node-externals": "1.6.0"
+    "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
     "antd": "3.2.1",
