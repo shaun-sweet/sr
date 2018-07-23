@@ -5016,9 +5016,9 @@ less-loader@4.0.5:
     loader-utils "^1.1.0"
     pify "^2.3.0"
 
-less@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/less/-/less-3.0.1.tgz#ba2fea24a5632ccb8c84230d6043c0bf91855e37"
+less@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/less/-/less-3.8.0.tgz#44785e40c23841c15ba3be741d36bd2775dd0596"
   optionalDependencies:
     errno "^0.1.1"
     graceful-fs "^4.1.2"
@@ -5026,8 +5026,8 @@ less@3.0.1:
     mime "^1.4.1"
     mkdirp "^0.5.0"
     promise "^7.1.1"
-    request "2.81.0"
-    source-map "^0.5.3"
+    request "^2.83.0"
+    source-map "~0.6.0"
 
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
@@ -7917,7 +7917,7 @@ source-map@^0.4.4:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.6.1, source-map@~0.6.1:
+source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
