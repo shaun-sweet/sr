@@ -72,7 +72,7 @@
     "lodash": "4.17.5",
     "lodash-webpack-plugin": "0.11.4",
     "mocha": "4.1.0",
-    "mocha-webpack": "1.0.1",
+    "mocha-webpack": "1.1.0",
     "nock": "9.1.6",
     "npm-run": "4.1.2",
     "nyc": "11.4.1",
