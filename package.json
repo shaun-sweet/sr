@@ -74,7 +74,7 @@
     "mocha": "4.1.0",
     "mocha-webpack": "1.0.1",
     "nock": "9.1.6",
-    "npm-run": "4.1.2",
+    "npm-run": "5.0.1",
     "nyc": "11.4.1",
     "prop-types": "15.6.0",
     "react": "16.2.0",
