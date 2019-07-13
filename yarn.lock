@@ -3354,15 +3354,15 @@ eslint-config-standard-flow@^1.0.1:
     eslint-plugin-promise "2.0.1"
     eslint-plugin-standard "2.0.0"
 
-eslint-config-standard-jsx@^4.0.0:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard-jsx/-/eslint-config-standard-jsx-4.0.2.tgz#009e53c4ddb1e9ee70b4650ffe63a7f39f8836e1"
+eslint-config-standard-jsx@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard-jsx/-/eslint-config-standard-jsx-7.0.0.tgz#05c737d9eab524860fe6853cfd535045c3e07e5b"
 
-eslint-config-standard-react@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard-react/-/eslint-config-standard-react-5.0.0.tgz#64c7b8140172852be810a53d48ee87649ff178e3"
+eslint-config-standard-react@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard-react/-/eslint-config-standard-react-8.0.0.tgz#567092a4142013046131f3d4c96d119d76392a7c"
   dependencies:
-    eslint-config-standard-jsx "^4.0.0"
+    eslint-config-standard-jsx "^7.0.0"
 
 eslint-config-standard@11.0.0-beta.0:
   version "11.0.0-beta.0"
