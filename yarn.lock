@@ -3407,11 +3407,11 @@ eslint-plugin-flowtype@2.7.1:
   dependencies:
     lodash "^4.9.0"
 
-eslint-plugin-flowtype@^2.45.0:
-  version "2.45.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.45.0.tgz#20d8b15d1e1e71ea4e9498e8be3fc62c0752fcbf"
+eslint-plugin-flowtype@^4.0.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-4.2.0.tgz#a89ac991eef6753226eb8871261e266645aca4b9"
   dependencies:
-    lodash "^4.15.0"
+    lodash "^4.17.15"
 
 eslint-plugin-import@1.13.0:
   version "1.13.0"
@@ -5196,6 +5196,10 @@ lodash@4.17.5, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.5, l
 lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
+lodash@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
 
 log-symbols@^2.1.0:
   version "2.2.0"
