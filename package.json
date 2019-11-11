@@ -102,7 +102,7 @@
   },
   "dependencies": {
     "antd": "3.2.1",
-    "dotenv": "5.0.0",
+    "dotenv": "8.2.0",
     "dropbox": "3.0.4",
     "prop-types-extra": "^1.0.1",
     "redux-persist": "5.9.1",
