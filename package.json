@@ -103,7 +103,7 @@
   "dependencies": {
     "antd": "3.2.1",
     "dotenv": "5.0.0",
-    "dropbox": "3.0.4",
+    "dropbox": "7.2.1",
     "prop-types-extra": "^1.0.1",
     "redux-persist": "5.9.1",
     "styled-components": "3.1.6",
