@@ -101,7 +101,7 @@
     "webpack-node-externals": "1.6.0"
   },
   "dependencies": {
-    "antd": "3.2.1",
+    "antd": "3.26.20",
     "dotenv": "5.0.0",
     "dropbox": "3.0.4",
     "prop-types-extra": "^1.0.1",
