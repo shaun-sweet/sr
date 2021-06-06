@@ -5,7 +5,7 @@
 defaults: &defaults
   working_directory: /tmp/sr
   docker:
-    - image: circleci/node:8
+    - image: circleci/node:16
   
 version: 2
 jobs:
