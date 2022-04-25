@@ -91,7 +91,7 @@
     "rekit-studio": "2.2.1",
     "request": "2.83.0",
     "shelljs": "0.8.1",
-    "sinon": "4.3.0",
+    "sinon": "13.0.2",
     "style-loader": "0.19.1",
     "url-loader": "0.6.2",
     "webpack": "3.11.0",
