@@ -6472,6 +6472,11 @@ prettier@1.10.2:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.10.2.tgz#1af8356d1842276a99a5b5529c82dd9e9ad3cc93"
 
+prettier@^1.12.1:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
 pretty-error@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-2.1.1.tgz#5f4f87c8f91e5ae3f3ba87ab4cf5e03b1a17f1a3"
@@ -7403,9 +7408,10 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-rekit-core@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/rekit-core/-/rekit-core-2.2.2.tgz#97d31d97402f128da7bf85603a2296963d8863b6"
+rekit-core@2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/rekit-core/-/rekit-core-2.3.4.tgz#015ff37ead09ec69a9d00abaeaebb02fc06b6cff"
+  integrity sha512-vHeKAk1nYHTu+b3CkcmtAoogpfCii9PgnnB5h09eZsy1vnXPF3jMYrORWujYovm/IPTDSu4e1ET13/HM+qah6g==
   dependencies:
     babel-generator "^6.23.0"
     babel-traverse "^6.23.1"
@@ -7419,6 +7425,7 @@ rekit-core@2.2.2:
     lodash "^4.17.4"
     minami "^1.1.1"
     npm-run "^4.1.0"
+    prettier "^1.12.1"
     shelljs "^0.8.0"
     trash "^4.2.1"
 
