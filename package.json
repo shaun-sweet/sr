@@ -67,7 +67,7 @@
     "fs": "0.0.1-security",
     "history": "4.7.2",
     "jsdom": "11.6.2",
-    "less": "3.0.1",
+    "less": "4.2.0",
     "less-loader": "4.0.5",
     "lodash": "4.17.5",
     "lodash-webpack-plugin": "0.11.4",
