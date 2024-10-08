@@ -59,7 +59,7 @@
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-react": "7.6.1",
     "eslint-plugin-standard": "3.0.1",
-    "express": "4.16.2",
+    "express": "4.21.1",
     "express-history-api-fallback": "2.2.1",
     "file-loader": "1.1.7",
     "flow-bin": "0.66.0",
