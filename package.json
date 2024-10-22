@@ -57,7 +57,7 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-node": "6.0.0",
     "eslint-plugin-promise": "3.6.0",
-    "eslint-plugin-react": "7.6.1",
+    "eslint-plugin-react": "7.37.2",
     "eslint-plugin-standard": "3.0.1",
     "express": "4.16.2",
     "express-history-api-fallback": "2.2.1",
